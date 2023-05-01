@@ -143,4 +143,97 @@ $$q = 2\pi KL\frac{T_i - T_o}{\ln(r_o / r_i)}$$
 
 ![pic3](imgs/exp-2-2_picture3.png)
 
+4. 交錯流熱交換器的筒體，其熱傳導係數(Heat Transfer Coefficient)由三個因素決定：
+    1. 流體流經管內的表面熱傳係數。
+    2. 管壁的熱傳導係數與厚度。
+    3. 流體流經管外的表面熱傳係數。
+5. 上面的三個因素中：
+    1. 第一、二項可以藉由增加流速和減少管壁厚度，或使用高熱傳導係數的管材增加熱傳效果。
+    2. 第三項可以藉由提升外部流體的流速（增加雷諾數）來提升表面熱傳係數。
+    3. 變更管簇的排列方式也可以提升熱傳效率，減少熱交換器體積。變更管簇排列可以產生紊流，增加表面熱傳係數。本實驗測量這部分的影響。
+6. 流體分為兩種流：
+    1. 層流：流速慢且流線不會交錯混淆，主要靠熱傳導(conduction)來傳遞熱量。
+    2. 紊流：流速快且流線相互混雜，可以快速傳遞熱量。雷諾數越高，熱傳效果越好。
+7. 我們定義以下三個常數：
 
+$$
+\begin{array}{l}
+    \text{Reynolds number: } & \text{Re}=\frac{\rho Ud}{\mu} \\
+    \text{Prandtl number: } & \text{Pr}=\frac{C_p\mu}{k} \\
+    \text{Nusselt number: } & \text{Nu}=\frac{hd}{k}
+\end{array}
+$$
+
+- $k$: thermal conductivity
+- $h$: surface heat transfer coefficient
+
+8. 因為熱對流系統複雜，所以會用動力相似(dynamic similarity)的原理來分析，可以得出 Nusselt number 是雷諾數($\text{Re}$)與 Prandtl number 的函數：
+
+$$\text{Nu} = f(\text{Re}, \text{Pr})$$
+
+9. 無因次分析可以得到：
+
+$$\text{Nu} = C \text{Re}^m \text{Pr}^n$$
+
+- $C, m, n$: 常數
+
+10. 經由實驗可以得到單管管子在交錯流熱交換器的 Nusselt number 為
+
+$$\implies \text{Nu} = 0.714 \text{Re}^{0.618}$$
+
+11. 當雷諾數介於 $4000 \sim 40000$ 時，將上式代入 Nusselt number 的定義可以得到：
+
+$$h = \frac{k}{d}0.714 \text{Re}^{0.618}$$
+
+12. 在多管管簇的交錯流熱交換器中，管道的截面積會縮小，導致流經管簇周邊的流體流速增加。流速可以用下面的公式修正：
+
+$$U' = U \frac{A_d}{A_t}$$
+
+- $A_d$: 無管簇的管道截面積
+- $A_t$: 有管簇時的管道截面積
+
+13. 經由實驗我們可以得到多管管簇在交錯流熱交換器的 Nusselt number 為：
+
+$$
+\text{Nu} = 0.273 \text{Re}^{0.635} \text{Pr}^{0.34} \text{Fn} \qquad \text{當 Re 介於 300~200000}
+$$
+
+- $\text{Fn}$: a function of the number of tube rows crossed by the transverse stream.
+
+| Number of Rows Crossed | 2   | 3    | 4   | 5    | 6    | 8    | 10  |
+| ---------------------- | --- | ---- | --- | ---- | ---- | ---- | --- |
+| $\text{Fn}$            | 0.8 | 0.84 | 0.9 | 0.93 | 0.96 | 0.98 | 1   |
+
+## 4. 相關計算
+
+1. 加熱棒的熱傳率：
+
+$$\dot Q = \frac{V^2}{R}$$
+
+- $V$: 加熱棒的電壓
+- $R$: 加熱棒的電阻，$70\Omega$
+
+2. 熱通量：
+
+$$\phi = \frac{\dot Q}{A}$$
+
+- $A$: 加熱棒的表面積，$2.482 \times 10^{-3} \text{m}^2$
+
+3. 加熱棒表面與空氣間之溫差：
+
+$$T_s - T_a = \Delta T$$
+
+- $T_a$: 管道內空氣溫度
+
+4. 平均表面熱傳係數(Mean Surface Heat Transfer Coefficient) $h$:
+
+$$
+\begin{array}{l}
+\displaystyle \phi = \frac{\dot Q}{A} = h(T_s - T_a) \\
+\displaystyle h = \frac{\phi}{(T_s - T_a)}
+\end{array}
+$$
+
+5. 管道空氣速度：
+    1. 單管：直接利用風速計測得風速$U$。
+    2. 多管：當管道內有管簇時，空氣流速會因為截面積的縮減而加快。因此

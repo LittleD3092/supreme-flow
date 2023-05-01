@@ -118,7 +118,7 @@ $$q = 2\pi KL\frac{T_i - T_o}{\ln(r_o / r_i)}$$
     2. 風扇
     3. 風扇氣門：在風扇出口處控制出口面積，以改變管道空氣流速。
 
-![pic2](imgs/exp2-2_picture2.jpg)
+![pic2](imgs/exp-2-2_picture2.jpg)
 
 2. 控制器(Instrument Console)
 3. 加熱棒(Heater Element): 利用電力加熱的銅棒
@@ -141,6 +141,6 @@ $$q = 2\pi KL\frac{T_i - T_o}{\ln(r_o / r_i)}$$
 2. 工業上常利用流體來傳送熱能，利用熱交換器交換兩種或多種不同溫度流體間的熱量。
 3. 熱交換器有許多形式，其中常見的一種是交錯流熱交換器(Cross-flow Heat Exchanger)。此交換器有一個流體在管簇內流動，另一流體在管簇外流動，以達到熱交換效果，如下圖：
 
-![pic3](imgs/exp2-2_picture3.png)
+![pic3](imgs/exp-2-2_picture3.png)
 
 

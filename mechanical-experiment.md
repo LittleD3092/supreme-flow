@@ -236,4 +236,49 @@ $$
 
 5. 管道空氣速度：
     1. 單管：直接利用風速計測得風速$U$。
-    2. 多管：當管道內有管簇時，空氣流速會因為截面積的縮減而加快。因此
+    2. 多管：當管道內有管簇時，空氣流速會因為截面積的縮減而加快。因此空氣速度修正為：
+
+$$
+\begin{array}{l}
+    U' = U \times \frac{A_d}{A_t} \\
+    \qquad A_d: \text{無管簇時的管道截面積} 
+           = 0.065\text{m} \times 0.15\text{m} 
+	   = 9.75 \times 10^{-3} \text{m}^2 \\
+    \qquad A_t: \text{無管簇時的管道截面積}
+           = 4.16 \times 10^{-3} \text{m}^2 \\
+    U' = 2.343 U
+\end{array}
+$$
+
+6. 雷諾數：
+
+$$\text{Re} = \frac{U\cdot d}{v}$$
+
+7. Nusselt number：
+
+$$
+\begin{array}{l}
+    \text{單管：} & \displaystyle 
+                    \text{Nu} = \frac{h \cdot d}{k}
+		    = 0.174 \text{Re}^{0.618}
+    \text{多管：} & \text{Nu} 
+                    = 0.273 \text{Re}^{0.635} \text{Pr}^{0.34} \text{Fn}
+\end{array}
+$$
+
+- $\text{Fn}$: for 6 rows, 0.96
+
+8. 平均表面熱傳係數（理論值）
+
+$$
+\begin{array}{l}
+    \text{單管：} & h = \frac{k}{d}0.174 \text{Re}^{0.618} 
+                      = 0.283 \text{Re}^{0.618} \\
+    \text{多管：} & h = \frac{k}{d} 0.273 \text{Re}^{0.635} 
+                        \text{Pr}^{0.34}
+\end{array}
+$$
+
+9. 參考數據：
+
+- 加熱棒的直徑：$d = 15.8\text{mm}$

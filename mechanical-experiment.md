@@ -1,3 +1,9 @@
+# Table of Contents
+
+- #TODO
+
+<div STYLE="page-break-after: always;"></div>
+
 # 實驗2-1: 熱傳實驗I 熱傳導
 
 ## 1. 實驗目的
@@ -16,7 +22,7 @@
 3. 溫度顯示器：用來插在 heat conduction unit 上面測量溫度。
 4. 冷卻水系統：放在 heat conduction unit 的一邊作為冷卻裝置製造溫度差。
 
-![Figure-2|500](imgs/Figure-2.jpeg)
+![Figure-2|500](imgs/exp-2-1_picture2.jpeg)
 
 ## 3. 實驗原理
 
@@ -38,13 +44,13 @@ $$q = -KA \frac{dT}{dX}$$
 - $A$: 截面積
 - $K$: 熱傳導係數
 
-![Figure-3|400](imgs/Figure-3.jpeg)
+![Figure-3|400](imgs/exp-2-1_picture3.jpeg)
 
 根據以上公式，可以得出圓柱棒的熱傳導係數 $K$ 為
 
 $$K = \frac{qL}{(T_1 - T_2)A}$$
 
-![Figure-4|400](imgs/Figure-4.jpeg)
+![Figure-4|400](imgs/exp-2-1_picture4.jpeg)
 
 4. 若金屬棒由不同材料組成，利用熱阻(thermal resistance)的概念可以得出熱傳導率為
 
@@ -64,7 +70,7 @@ $$
 \end{array}
 $$
 
-![Figure-5|](imgs/Figure-5.jpeg)
+![Figure-5|](imgs/exp-2-1_picture5.jpeg)
 
 5. 在徑向系統下，Fourier's law 可以寫成以下公式：
 
@@ -74,12 +80,12 @@ $$q = -KA \frac{dT}{dr} = -2\pi Kr L \frac{dT}{dr}$$
 
 $$q = 2\pi KL\frac{T_i - T_o}{\ln(r_o / r_i)}$$
 
-![Figure-6|300](imgs/Figure-6.jpeg)
+![Figure-6|300](imgs/exp-2-1_picture6.jpeg)
 
 ## 4. 實驗步驟
 
 ### 4.1. 線型模式(linear module)
-ㄛ
+
 1. 開啟冷卻水馬達，並確認水流有在循環。
 2. 於黃銅的測試棒兩端塗上矽質黏土或散熱膏，以避免接觸面有空隙形成新的熱阻抗(contact resistance)。
 3. 接好測試棒及線型模式的加熱電源線，並開啟電源。
@@ -104,6 +110,126 @@ $$q = 2\pi KL\frac{T_i - T_o}{\ln(r_o / r_i)}$$
 | Copper             | 353 to 386 |
 | Stainless Steel    | 16         |
 | Aluminium          | 205 to 237 |
+
+<div STYLE="page-break-after: always;"></div>
+
+## 5. 實驗結果
+
+### 5.1. Linear Module (表格數值填寫真值即可)
+
+| Test No. | 材質   | I (A) | V (V) | Q (W)  | T1   | T2   | T3   | T4   | T5   | T6   | T7   | K值  |
+| -------- | ------ | ----- | ----- | ------ | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 1        | 黃銅   | 1.57  | 9.6   | 15.072 | 50.4 | 48.0 | 44.8 | 38.2 | 29.0 | 26.8 | 24.8 | 99.9493 |
+| 2        | 黃銅   | 2.2   | 13.5  | 29.7   | 76.3 | 71.2 | 65.4 | 52.3 | 36.0 | 31.7 | 27.7 | 103.7454 |
+| 3        | 不鏽鋼 | 1.55  | 9.6   | 14.88  | 46.0 | 44.3 | 42.0 | 34.4 | 26.3 | 24.8 | 23.6 | 112.7726 |
+| 4        | 不鏽鋼 | 2.19  | 13.5  | 29.565 | 68.0 | 63.9 | 59.5 | 44.7 | 29.6 | 27.1 | 24.9 | 116.4527 |
+
+### 5.2. Radial Module (表格數值填寫真值即可)
+
+| Test No. | 材質 | I (A) | V (V) | Q (W)  | T1   | T2   | T3   | T4   | T5   | T6   | T7   | K值      |
+| -------- | ---- | ----- | ----- | ------ | ---- | ---- | ---- | ---- | ---- | ---- | ---- | -------- |
+| 1        | 黃銅 | 1.58  | 9.1   | 14.378 | 28.5 | 27.2 | 26.0 | 24.9 | 24.2 | 23.5 | 22.9 | 159.0316 |
+| 2        | 黃銅 | 2.29  | 13.3  | 30.457 | 33.9 | 31.2 | 29.2 | 27.1 | 25.8 | 24.6 | 23.7 | 184.9524 |
+
+### 5.3. 繪圖求熱傳遞係數K值
+
+
+![](imgs/exp-2-1_picture7.png)
+
+依照公式可以得出線性與徑向的K值：
+
+$$
+\begin{array}{}
+	K_{linear} &=& 
+	\displaystyle
+	\frac{qL}{(T_1 - T_2)A} \\
+	K_{radial} &=& 
+	\displaystyle
+	\frac{q\ln (r_o / r_i)}{2\pi L (T_i - T_o)}
+\end{array}
+$$
+
+$$
+\implies 
+\left\{
+	\begin{array}{}
+		K_{linear, 1} &=&
+		\displaystyle
+		\frac{
+			15.072 \times (0.02 \times 6)
+		}{
+			(50.4 - 24.8) \times 0.015^2\pi
+		} &=& 99.9493 \\
+		K_{linear, 2} &=&
+		\displaystyle
+		\frac{
+			29.7 \times (0.02 \times 6)
+		}{
+			(76.3 - 27.7) \times 0.015^2\pi
+		} &=& 103.7454 \\
+		K_{linear, 3} &=&
+		\displaystyle
+		\frac{
+			14.88 \times (0.02 \times 6)
+		}{
+			(46.0 - 23.6) \times 0.015^2\pi
+		} &=& 112.7726 \\
+		K_{linear, 4} &=&
+		\displaystyle
+		\frac{
+			29.565 \times (0.02 \times 6)
+		}{
+			(68.0 - 24.9) \times 0.015^2\pi
+		} &=& 116.4527 \\
+		K_{radial, 1} &=&
+		\displaystyle
+		\frac{14.378 \times \ln(\frac{0.01 \times 7}{0.01\times 1})}{2\pi \times 0.005 \times (28.5 - 22.9)} &=&
+		159.0316 \\
+		K_{radial, 2} &=&
+		\displaystyle
+		\frac{30.457 \times \ln(\frac{0.01 \times 7}{0.01\times 1})}{2\pi \times 0.005 \times (33.9 - 23.7)} &=& 184.9524
+	\end{array}
+\right.
+$$
+
+## 6. 問題與討論
+
+1. 就實驗曲線所得熱傳遞係數K值與查表所得精確值比較，並解釋所得結果？
+
+以下為實驗所得與查表所得熱傳導係數比較：
+
+| 模組          | Test No. | 材質   | 實驗值 K值 | 查表 K值 | 誤差值  |
+| ------------- | -------- | ------ | ---------- | -------- | ------- |
+| Linear Module | 1        | 黃銅   | 99.9493    | 123      | -18.74% |
+|               | 2        | 黃銅   | 103.7454   | 123      | -15.65% |
+|               | 3        | 不鏽鋼 | 112.7726   | 16       | 604.83% |
+|               | 4        | 不鏽鋼 | 116.4527   | 16       | 627.83% | 
+| Radial Module | 1        | 黃銅   | 159.0316   | 123      | 29.29%  |
+|               | 2        | 黃銅   | 184.9524   | 123      | 50.37%  |
+
+不鏽鋼的部份，實驗的K值遠高於查表的K值，並且數值接近黃銅，因此我們懷疑再做實驗時有可能誤拿黃銅做實驗，但我們已無法確認。
+
+黃銅在線性模組中K值低於查表值，代表傳導的速度低於預期。這可能是因為散熱膏沒有塗好，導致中間有氣泡影響散熱效果。
+
+在徑向模組中，黃銅的K值皆高於查表值。這個是因為徑向的散熱較快，相比於查表值熱傳較快。
+
+2. 當加熱功率不同時，所得K值是否有改變？如有，其理由為何？
+
+當加熱功率增加時，K值也會些微的增加。這是由於溫度較高時，分子間的運動加快，造成熱傳的效果變好。
+
+3. 在穩態下所讀取的數據才有效，你做到了這一點嗎？
+
+是，我們只有在斜率沒有變化時讀取數據。
+
+4. 本實驗還有哪些需改良的地方？其如何改善？
+
+在計算不鏽鋼的熱傳導係數時與查表值相差很遠，我希望可以知道為什麼這會發生。
+
+## 7. 心得與建議
+
+這次的實驗做很久，非常耗時，相較其他實驗花了更久時間達到穩態。希望可以知道為什麼這個實驗達到穩態需要這麼久，並且有沒有方法可以計算達到穩態的時間。
+
+<div STYLE="page-break-after: always;"></div>
 
 # 實驗2-2: 熱傳實驗II 熱對流交錯流熱交換器
 
@@ -310,6 +436,582 @@ $$
 
 1. 為求得較正確的數據，本實驗費時較久，請同學耐心完成之。
 2. 加熱棒溫度很高（$95 \degree \text C$），抽換時要特別小心，以免燙傷。
+
+<div STYLE="page-break-after: always;"></div>
+
+## 6. 實驗結果
+
+- 大氣壓力：1008.4 hPa
+- 大氣溫度：24.0 $\degree \text C$
+
+### 6.1. 單管
+
+| Test No.                     | 1    |            | 2    |            | 3    |            |
+| ---------------------------- | ---- | ---------- | ---- | ---------- | ---- | ---------- |
+|                              | 真值 | 誤差值     | 真值 | 誤差值     | 真值 | 誤差值     |
+| 加熱棒表面溫度$T_s(\text K)$ | 95.1 | $\pm 0.1$  | 95.2 | $\pm 0.1$  | 95.3 | $\pm 0.1$  |
+| 管道內空氣溫度$T_a(\text K)$ | 27.3 | $\pm 0.1$  | 27.3 | $\pm 0.1$  | 27.4 | $\pm 0.1$  |
+| 風速U (m/s)                  | 2.30 | $\pm 0.01$ | 1.97 | $\pm 0.01$ | 2.20  | $\pm 0.01$ |
+| 加熱棒之電壓 $V$ (Volt)      | 24   | $\pm 1$    | 24   | $\pm 1$    | 24   | $\pm 1$    |
+
+Derived Results:
+
+| Test No.                                                                         | 1      |        | 2      |        | 3      |        |
+| -------------------------------------------------------------------------------- | ------ | ------ | ------ | ------ | ------ | ------ |
+|                                                                                  | 真值   | 誤差值 | 真值   | 誤差值 | 真值   | 誤差值 |
+| 加熱棒的熱傳率 $\dot Q = V^2 / R$ (Watt)                                         | 8.2    | 0.5    | 8.2    | 0.5    | 8.2    | 0.5    |
+| 熱通量 ($\text{Watt/m}^2$) $\phi = \dot Q / A$                                   | 3300   | 80     | 3300   | 80     | 3300   | 80     |
+| 加熱棒表面與空氣間之溫度差 $T_s - T_a$ (K)                                       | 67.80  | 0.14   | 67.90  | 0.14   | 67.90  | 0.14   |
+| 平均表面熱傳係數 $h = \phi / (T_s - T_a)$ ($\text{W/m}^2 \text{K}$)              | 48.7   | 1.2    | 48.6   | 1.2    | 48.6   | 1.2    |
+| Reynolds number $\text{Re} = U \cdot d / \nu$                                    | 2369   | 10     | 2029   | 10     | 2266   | 10     |
+| Nusselt number $\text{Nu} = 0.174 \text{Re}^{0.618}$                             | 21.185 | 0.003  | 19.251 | 0.003  | 20.611 | 0.003  |
+| 平均表面熱傳係數（理論值）($\text{W/m}^2\text{K}$) $h = 0.283 \text{Re}^{0.618}$ | 34.456 | 0.003  | 31.310 | 0.003  | 33.523       | 0.003  |
+
+#### 6.1.1. 加熱棒的熱傳導 誤差傳遞
+
+$$
+\begin{array}{rl}
+	&\bar{\dot Q} &=& 
+	\displaystyle
+	\frac{
+		\bar{V}^2
+	}{\bar R} \\
+	& \sigma_{uv} &=& \sigma_u^2 \bar v^2 + \sigma_v^2 \bar u^2 &
+	u = V & v = V \\
+	\implies & \sigma_{V^2}^2 &=&
+	\sigma_V^2 \bar V^2 + \sigma_V^2 \bar V^2 \\
+	\implies & \sigma_{V^2} &=& \sqrt 2 \sigma_V \bar V \\
+	& \sigma_{\frac{u}{v}} &=&
+	\displaystyle
+	\frac{\sigma_u^2}{\bar v^2} + \frac{\sigma_v \bar u^2}{\bar v^4} & u = V^2 & v = R \\
+	\implies & \sigma_{\frac{V^2}{R}}^2 &=&
+	\displaystyle
+	\frac{\sigma_{V^2}^2}{\bar R^2} + \frac{\sigma_R^2 \bar{V^2}^2}{\bar R^4}
+\end{array}
+$$
+
+$$
+\begin{array}{rl}
+	\bar{\dot Q} & = & 
+	\displaystyle
+	\frac{24^2}{70} \\
+	&=& 8.2286 \\
+	&\approx& 8.2 \\
+	\sigma_{V^2} &=&
+	\sqrt{2} \sigma_V \bar V \\
+	&=& \sqrt{2} \times 1 \times 24 \\
+	&=& 24\sqrt{2} \\
+	&=& 33.9411 \\
+	\sigma_{\frac{V^2}{R}}^2 &=& 
+	\displaystyle
+	\frac{33.9411^2}{70^2} + \frac{0}{70^4} \\
+	\implies \sigma_{\frac{V^2}{R}} &=&
+	\displaystyle
+	\sqrt{\frac{33.9411^2}{70^2}} \\
+	&=& 0.4859 \\
+	&\approx& 0.5 \\
+	\implies  \dot Q &=& 8.2 \pm 0.5
+\end{array}
+$$
+
+#### 6.1.2. 熱通量 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\displaystyle
+	\frac{\bar{\dot Q}}{\bar A} &=& 
+	\displaystyle
+	\frac{8.2}{2.482 \times 10^{-3}} \\
+	&=& 3303.7873 \\
+	\sigma_{\frac{u}{v}}^2 &=& 
+	\displaystyle
+	\frac{\sigma_u^2}{\bar v^2} + \frac{\sigma_v^2 \bar u^2}{\bar v^4} &
+	u = \dot Q & v = A \\
+	\implies \sigma_{\frac{\dot Q}{A}}^2 &=&
+	\displaystyle
+	\frac{\sigma_{\dot Q}^2}{\bar A^2} + 
+	\frac{\sigma_A^2 \bar{\dot Q}^2}{\bar A^4} \\
+	&=& 
+	\displaystyle
+	\frac{0.2^2}{(2.482 \times 10^{-3})^2} + 0 \\
+	\implies \sigma_{\frac{\dot Q}{A}} &=&
+	\displaystyle
+	\frac{0.2}{2.482 \times 10^{-3}} \\
+	&=& 80.5802 \\
+	&\approx& 80 \\
+	\implies \phi &=& 3300 \pm 80
+\end{array}
+$$
+
+#### 6.1.3. 加熱棒表面與空氣間之溫度差 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline{T_s - T_a} &=&
+	\overline T_s - \overline T_a \\
+	\sigma_{u - v}^2 &=&
+	\sigma_u^2 + \sigma_v^2 & u = T_s & v = T_a \\
+	\implies \sigma_{T_s - T_a}^2 &=& \sigma_{T_s}^2 + \sigma_{T_a}^2 \\
+	\implies \sigma_{T_s - T_a} &=& \sqrt{\sigma_{T_s}^2 + \sigma_{T_a}^2}
+\end{array}
+$$
+
+#### 6.1.4. 平均表面熱傳係數 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline h &=& 
+	\displaystyle
+	\frac{\overline \phi}{\overline{(T_s - T_a)}} \\
+	\sigma_{\frac{u}{v}}^2 &=& 
+	\displaystyle
+	\frac{\sigma_u^2}{\overline v^2} + \frac{\sigma_v^2 \overline u^2}{\overline v^4} & u = \phi & v = (T_s - T_a) \\
+	\implies \sigma_{\frac{\phi}{(T_s - T_a)}}^2 &=& 
+	\displaystyle
+	\frac{\sigma_\phi^2}{\overline{(T_s - T_a)}^2} + 
+	\frac{\sigma_{(T_s - T_a)}^2 \overline{\phi}^2}{\overline{(T_s - T_a)}^4} \\
+	\implies \sigma_{\frac{\phi}{(T_s - T_a)}} &=&
+	\displaystyle
+	\sqrt{
+		\frac{\sigma_\phi^2}{\overline{(T_s - T_a)}^2} + 
+		\frac{
+			\sigma_{(T_s - T_a)}^2 \overline{\phi}^2
+		}{
+			\overline{(T_s - T_a)}^4
+		}
+	}
+\end{array}
+$$
+
+#### 6.1.5. Reynolds number 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline{\text{Re}} &=& 
+	\displaystyle
+	\frac{\overline U \cdot \overline d}{\overline \nu} \\
+	\sigma_{uv}^2 &=& 
+	\sigma_u^2 \overline v^2 + \sigma_v^2 \overline u^2 & u = U & v = d \\
+	\implies \sigma_{Ud}^2 &=&
+	\sigma_{U}^2 \overline d^2 + \sigma_{d}^2 \overline U^2 \\
+	\implies \sigma_{Ud} &=&
+	\sqrt{\sigma_{U}^2 \overline d^2 + \sigma_{d}^2 \overline U^2} \\
+	\sigma_{\frac{u}{v}}^2 &=& 
+	\displaystyle
+	\frac{\sigma_u^2}{\overline v^2} + \frac{\sigma_v^2 \overline u^2}{\overline v^4} & u = Ud & v = \nu \\
+	\implies \sigma_{\frac{Ud}{\nu}}^2 &=&
+	\displaystyle
+	\frac{\sigma_{Ud}^2}{\overline \nu^2} + \frac{\sigma_{\nu}^2 \overline{Ud}^2}{\overline \nu^4} & \sigma_\nu = 0\\
+	\implies \sigma_{\frac{Ud}{\nu}} &=&
+	\displaystyle
+	\frac{\sigma_{Ud}}{\overline \nu}
+\end{array}
+$$
+
+#### 6.1.6. Nusselt number 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline{\text{Nu}} &=&
+	0.174 \overline{\text{Re}}^{0.618} \\
+	\sigma_{u^lv^m}^2 &=&
+	\displaystyle
+	l^2
+	\left(
+		\frac{\sigma_u}{\overline u}
+	\right)^2 + 
+	m^2
+	\left(
+		\frac{\sigma_v}{\overline v}
+	\right)^2 & u = 0.174 & l = 1 \\
+	&&& v = \text{Re} & m = 0.618 \\
+	\implies \sigma_{0.174\text{Re}^{0.618}}^2
+	&=& \displaystyle
+	0.618^2\left(
+		\frac{\sigma_{\text{Re}}}{\overline{\text{Re}}}
+	\right)^2 \\
+	\implies \sigma_{0.174\text{Re}^{0.618}} &=&
+	\displaystyle
+	0.618\left(
+		\frac{\sigma_{\text{Re}}}{\overline{\text{Re}}}
+	\right)
+\end{array}
+$$
+
+#### 6.1.7. 平均表面熱傳係數（理論值） 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline h &=&
+	0.283 \overline{\text{Re}}^{0.618} \\
+	\sigma_{u^l v^m}^2 &=&
+	\displaystyle
+	l^2
+	\left(
+		\frac{\sigma_u}{\overline u}
+	\right)^2 +
+	m^2
+	\left(
+		\frac{\sigma_v}{\overline v}
+	\right)^2 & u = 0.283 & l = 1 \\
+	&&& v = \text{Re} & m = 0.618 \\
+	\implies \sigma_{0.283\text{Re}^{0.618}}^2 &=&
+	\displaystyle
+	0.618^2 \left(
+		\frac{\sigma_{\text{Re}}}{\overline{\text{Re}}}
+	\right)^2 \\
+	\implies \sigma_{0.283\text{Re}^{0.618}} &=&
+	\displaystyle
+	0.618 \left(
+		\frac{\sigma_{\text{Re}}}{\overline{\text{Re}}}
+	\right)
+\end{array}
+$$
+
+### 6.2. 多管
+
+#### 6.2.1. 第1列 (1st row)
+
+| Test No.                | 1    |        | 2    |        | 3    |        |
+| ----------------------- | ---- | ------ | ---- | ------ | ---- | ------ |
+|                         | 真值 | 誤差值 | 真值 | 誤差值 | 真值 | 誤差值 |
+| 加熱棒表面溫度 $T_s$(K) | 95.1 | 0.1    | 94.6 | 0.1    | 95.3 | 0.1    |
+| 管道內空氣溫度 $T_a$(K) | 27.9 | 0.1    | 27.9 | 0.1    | 28.0 | 0.1    |
+| 風速 U (m/s)            | 1.84 | 0.01   | 1.82 | 0.01   | 2.07 | 0.01   |
+| 加熱棒之電壓 $V$ (Volt) | 26   | 1      | 26   | 1      | 26   | 1      | 
+
+Derived Results
+
+| Test No.                                                                                           | 1        |         | 2        |         | 3        |         |
+| -------------------------------------------------------------------------------------------------- | -------- | ------- | -------- | ------- | -------- | ------- |
+|                                                                                                    | 真值     | 誤差值  | 真值     | 誤差值  | 真值     | 誤差值  |
+| 加熱棒的熱傳率 $\dot Q = V^2 / R$ (Watt)                                                           | 9.7      | 0.5     | 9.7      | 0.5     | 9.7      | 0.5     |
+| 熱通量 ($\text{Watt/m}^2$) $\phi = \dot Q / A$                                                     | 3900     | 200     | 3900     | 200     | 3900     | 200     |
+| 加熱棒表面與空氣間之溫度差 $T_s - T_a$ (K)                                                         | 67.20    | 0.14    | 66.70    | 0.14    | 67.30    | 0.14    |
+| 平均表面熱傳係數 $h = \phi / (T_s - T_a)$ ($\text{W/m}^2\text{K}$)                                 | 58       | 3       | 58       | 3       | 58       | 3       |
+| 有效空氣速度 $U' = 2.343U$ (m/s)                                                                   | 4.31     | 0.02    | 4.26     | 0.02    | 4.85     | 0.02    |
+| Reynolds number $\text{Re} = U' \cdot d / \nu$                                                     | 4440     | 20      | 4390     | 20      | 5000     | 20      |
+| Nusselt number $\text{Nu} = 0.273 \text{Re}^{0.635} \text{Pr}^{0.34}\text{Fn}$                     | 48.06793 | 0.00005 | 47.72349 | 0.00005 | 51.83381 | 0.00004 |
+| 平均表面熱傳係數（理論值）($\text{W/m}^2 \text{K}$) $h = 0.426 \text{Re}^{0.635} \text{Pr}^{0.34}$ | 78.13239 | 0.00003 | 77.57252 | 0.00003 | 84.25368 | 0.00003 | 
+
+#### 6.2.2. 第3列(3rd row)
+
+| Test No.                | 1    |        | 2    |        | 3    |        |
+| ----------------------- | ---- | ------ | ---- | ------ | ---- | ------ |
+|                         | 真值 | 誤差值 | 真值 | 誤差值 | 真值 | 誤差值 |
+| 加熱棒表面溫度 $T_s$(K) | 95.4 | 0.1    | 94.8 | 0.1    | 95.0 | 0.1    |
+| 管道內空氣溫度 $T_a$(K) | 27.9 | 0.1    | 28.0 | 0.1    | 28.0 | 0.1    |
+| 風速 U (m/s)            | 1.90 | 0.01   | 1.93 | 0.01   | 1.93 | 0.01   |
+| 加熱棒之電壓 $V$ (Volt) | 30   | 1      | 31   | 1      | 30   | 1      |
+
+Derived Results
+
+| Test No.                                                                                           | 1        |         | 2        |         | 3        |         |
+| -------------------------------------------------------------------------------------------------- | -------- | ------- | -------- | ------- | -------- | ------- |
+|                                                                                                    | 真值     | 誤差值  | 真值     | 誤差值  | 真值     | 誤差值  |
+| 加熱棒的熱傳率 $\dot Q = V^2 / R$ (Watt)                                                           | 12.9     | 0.6     | 13.7     | 0.6     | 12.9     | 0.6     |
+| 熱通量 ($\text{Watt/m}^2$) $\phi = \dot Q / A$                                                     | 5200     | 200     | 5500     | 200     | 5200     | 200     |
+| 加熱棒表面與空氣間之溫度差 $T_s - T_a$ (K)                                                         | 67.50    | 0.14    | 66.80    | 0.14    | 67.00    | 0.14    |
+| 平均表面熱傳係數 $h = \phi / (T_s - T_a)$ ($\text{W/m}^2\text{K}$)                                 | 77       | 3       | 82       | 3       | 78       | 3       |
+| 有效空氣速度 $U' = 2.343U$ (m/s)                                                                   | 4.45     | 0.02    | 4.52     | 0.02    | 4.52     | 0.02    |
+| Reynolds number $\text{Re} = U' \cdot d / \nu$                                                     | 4580     | 20      | 4660     | 20      | 4660     | 20      |
+| Nusselt number $\text{Nu} = 0.273 \text{Re}^{0.635} \text{Pr}^{0.34}\text{Fn}$                     | 49.02491 | 0.00005 | 49.56696 | 0.00005 | 49.56696 | 0.00005 |
+| 平均表面熱傳係數（理論值）($\text{W/m}^2 \text{K}$) $h = 0.426 \text{Re}^{0.635} \text{Pr}^{0.34}$ | 79.68792 | 0.00003 | 80.56900 | 0.00003 | 80.56900 | 0.00003 | 
+
+#### 6.2.3. 第6列(6th row)
+
+| Test No.                | 1    |        | 2    |        | 3    |        |
+| ----------------------- | ---- | ------ | ---- | ------ | ---- | ------ |
+|                         | 真值 | 誤差值 | 真值 | 誤差值 | 真值 | 誤差值 |
+| 加熱棒表面溫度 $T_s$(K) | 94.8 | 0.1    | 95.1 | 0.1    | 95.4 | 0.1    |
+| 管道內空氣溫度 $T_a$(K) | 27.6 | 0.1    | 28.1 | 0.1    | 27.9 | 0.1    |
+| 風速 U (m/s)            | 1.71 | 0.01   | 1.89 | 0.01   | 1.79 | 0.01   |
+| 加熱棒之電壓 $V$ (Volt) | 32   | 1      | 32   | 1      | 32   | 1      | 
+
+Derived Results
+
+| Test No.                                                                                           | 1        |         | 2        |         | 3        |         |
+| -------------------------------------------------------------------------------------------------- | -------- | ------- | -------- | ------- | -------- | ------- |
+|                                                                                                    | 真值     | 誤差值  | 真值     | 誤差值  | 真值     | 誤差值  |
+| 加熱棒的熱傳率 $\dot Q = V^2 / R$ (Watt)                                                           | 14.6     | 0.6     | 14.6     | 0.6     | 14.6     | 0.6     |
+| 熱通量 ($\text{Watt/m}^2$) $\phi = \dot Q / A$                                                     | 5900     | 200     | 5900     | 200     | 5900     | 200     |
+| 加熱棒表面與空氣間之溫度差 $T_s - T_a$ (K)                                                         | 67.20    | 0.14    | 67.00    | 0.14    | 67.50    | 0.14    |
+| 平均表面熱傳係數 $h = \phi / (T_s - T_a)$ ($\text{W/m}^2\text{K}$)                                 | 88       | 3       | 88       | 3       | 87       | 3       |
+| 有效空氣速度 $U' = 2.343U$ (m/s)                                                                   | 4.01     | 0.02    | 4.43     | 0.02    | 4.19     | 0.02    |
+| Reynolds number $\text{Re} = U' \cdot d / \nu$                                                     | 4130     | 20      | 4560     | 20      | 4320     | 20      |
+| Nusselt number $\text{Nu} = 0.273 \text{Re}^{0.635} \text{Pr}^{0.34}\text{Fn}$                     | 45.90875 | 0.00005 | 48.88886 | 0.00005 | 47.23886 | 0.00005 |
+| 平均表面熱傳係數（理論值）($\text{W/m}^2 \text{K}$) $h = 0.426 \text{Re}^{0.635} \text{Pr}^{0.34}$ | 74.62274 | 0.00004 | 79.46678 | 0.00003 | 76.78477 | 0.00003 | 
+
+#### 6.2.4. 加熱棒的熱傳率 誤差傳遞
+
+$$
+\begin{array}{rl}
+	&\bar{\dot Q} &=& 
+	\displaystyle
+	\frac{
+		\bar{V}^2
+	}{\bar R} \\
+	& \sigma_{uv} &=& \sigma_u^2 \bar v^2 + \sigma_v^2 \bar u^2 &
+	u = V & v = V \\
+	\implies & \sigma_{V^2}^2 &=&
+	\sigma_V^2 \bar V^2 + \sigma_V^2 \bar V^2 \\
+	\implies & \sigma_{V^2} &=& \sqrt 2 \sigma_V \bar V \\
+	& \sigma_{\frac{u}{v}} &=&
+	\displaystyle
+	\frac{\sigma_u^2}{\bar v^2} + \frac{\sigma_v \bar u^2}{\bar v^4} & u = V^2 & v = R \\
+	\implies & \sigma_{\frac{V^2}{R}}^2 &=&
+	\displaystyle
+	\frac{\sigma_{V^2}^2}{\bar R^2} + \frac{\sigma_R^2 \bar{V^2}^2}{\bar R^4} \\
+	\implies & \sigma_{\frac{V^2}{R}} &=&
+	\sqrt{
+		\displaystyle
+		\frac{\sigma_{V^2}^2}{\bar R^2} + \frac{\sigma_R^2 \bar{V^2}^2}{\bar R^4}
+	}
+\end{array}
+$$
+
+#### 6.2.5. 熱通量 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\displaystyle
+	\overline \phi &=& 
+	\displaystyle
+	\frac{\bar{\dot Q}}{\bar A} \\
+	\sigma_{\frac{u}{v}}^2 &=& 
+	\displaystyle
+	\frac{\sigma_u^2}{\bar v^2} + \frac{\sigma_v^2 \bar u^2}{\bar v^4} &
+	u = \dot Q & v = A \\
+	\implies \sigma_{\frac{\dot Q}{A}}^2 &=&
+	\displaystyle
+	\frac{\sigma_{\dot Q}^2}{\bar A^2} + 
+	\frac{\sigma_A^2 \bar{\dot Q}^2}{\bar A^4} \\
+	\implies \sigma_{\frac{\dot Q}{A}} &=&
+	\sqrt{
+		\displaystyle
+		\frac{\sigma_{\dot Q}^2}{\bar A^2} + 
+		\frac{\sigma_A^2 \bar{\dot Q}^2}{\bar A^4}
+	}
+\end{array}
+$$
+
+#### 6.2.6. 加熱棒表面與空氣間之溫度差 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline{T_s - T_a} &=&
+	\overline T_s - \overline T_a \\
+	\sigma_{u - v}^2 &=&
+	\sigma_u^2 + \sigma_v^2 & u = T_s & v = T_a \\
+	\implies \sigma_{T_s - T_a}^2 &=& \sigma_{T_s}^2 + \sigma_{T_a}^2 \\
+	\implies \sigma_{T_s - T_a} &=& \sqrt{\sigma_{T_s}^2 + \sigma_{T_a}^2}
+\end{array}
+$$
+
+#### 6.2.7. 平均表面熱傳係數 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline h &=& 
+	\displaystyle
+	\frac{\overline \phi}{\overline{(T_s - T_a)}} \\
+	\sigma_{\frac{u}{v}}^2 &=& 
+	\displaystyle
+	\frac{\sigma_u^2}{\overline v^2} + \frac{\sigma_v^2 \overline u^2}{\overline v^4} & u = \phi & v = (T_s - T_a) \\
+	\implies \sigma_{\frac{\phi}{(T_s - T_a)}}^2 &=& 
+	\displaystyle
+	\frac{\sigma_\phi^2}{\overline{(T_s - T_a)}^2} + 
+	\frac{\sigma_{(T_s - T_a)}^2 \overline{\phi}^2}{\overline{(T_s - T_a)}^4} \\
+	\implies \sigma_{\frac{\phi}{(T_s - T_a)}} &=&
+	\displaystyle
+	\sqrt{
+		\frac{\sigma_\phi^2}{\overline{(T_s - T_a)}^2} + 
+		\frac{
+			\sigma_{(T_s - T_a)}^2 \overline{\phi}^2
+		}{
+			\overline{(T_s - T_a)}^4
+		}
+	}
+\end{array}
+$$
+
+#### 6.2.8. 有效空氣速度 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline {U'} &=& 2.343 \overline U \\
+	\sigma_{uv}^2 &=& 
+	\sigma_u^2 \overline v^2 + \sigma_v^2 \overline u^2 &
+	u = 2.343 & v = U \\
+	\implies \sigma_{2.343U}^2 &=&
+	\sigma_U^2 2.343^2 \\
+	\implies \sigma_{2.343U} & = &
+	\sigma_U \cdot 2.343
+\end{array}
+$$
+
+#### 6.2.9. Reynolds number 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline{\text{Re}} &=& 
+	\displaystyle
+	\frac{\overline U' \cdot \overline d}{\overline \nu} \\
+	\sigma_{uv}^2 &=& 
+	\sigma_u^2 \overline v^2 + \sigma_v^2 \overline u^2 & u = U' & v = d \\
+	\implies \sigma_{U'd}^2 &=&
+	\sigma_{U'}^2 \overline d^2 + \sigma_{d}^2 \overline U'^2 \\
+	\implies \sigma_{U'd} &=&
+	\sqrt{\sigma_{U'}^2 \overline d^2 + \sigma_{d}^2 \overline U'^2} \\
+	\sigma_{\frac{u}{v}}^2 &=& 
+	\displaystyle
+	\frac{\sigma_u^2}{\overline v^2} + \frac{\sigma_v^2 \overline u^2}{\overline v^4} & u = U'd & v = \nu \\
+	\implies \sigma_{\frac{U'd}{\nu}}^2 &=&
+	\displaystyle
+	\frac{\sigma_{U'd}^2}{\overline \nu^2} + \frac{\sigma_{\nu}^2 \overline{U'd}^2}{\overline \nu^4} & \sigma_\nu = 0\\
+	\implies \sigma_{\frac{U'd}{\nu}} &=&
+	\displaystyle
+	\frac{\sigma_{U'd}}{\overline \nu}
+\end{array}
+$$
+
+#### 6.2.10. Nusselt number 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline{\text{Nu}} &=& 0.273 \overline{\text{Re}}^{0.635} \overline{\text{Pr}}^{0.34}\overline{\text{Fn}} \\
+	\sigma_{u^l v^m}^2 &=& 
+	\displaystyle
+	l^2 \left(
+		\frac{\sigma_u}{\overline u}
+	\right)^2 +
+	m^2 \left(
+		\frac{\sigma_v}{\overline v}
+	\right)^2 & 
+	u = 0.273  \\
+	&&& l = 1 \\
+	&&& v = \text{Re} \\
+	&&& m = 0.635 \\
+	\implies \sigma_{0.273\text{Re}^{0.635}}^2 &=&
+	\displaystyle
+	0.635^2\left(
+		\frac{\sigma_{\text{Re}}}{\overline{\text{Re}}}
+	\right)^2 \\
+	\implies \sigma_{0.273\text{Re}^{0.635}} &=&
+	\displaystyle
+	0.635\left(
+		\frac{\sigma_{\text{Re}}}{\overline{\text{Re}}}
+	\right) \\
+	\sigma_{u^l v^m}^2 &=& 
+	\displaystyle
+	l^2 \left(
+		\frac{\sigma_u}{\overline u}
+	\right)^2 +
+	m^2 \left(
+		\frac{\sigma_v}{\overline v}
+	\right)^2 & 
+	u = 0.273\text{Re}^{0.635} & \\
+	&&& l = 1 \\
+	&&& v = \text{Pr} \\
+	&&& m = 0.34 \\
+	\implies \sigma_{0.273\text{Re}^{0.635}\text{Pr}^{0.34}}^2 &=&
+	\displaystyle
+	\left(
+		\frac{\sigma_{0.273\text{Re}^{0.635}}}{\overline{0.273 \text{Re}^{0.635}}}
+	\right)^2 \\
+	\implies \sigma_{0.273\text{Re}^{0.635}\text{Pr}^{0.34}} &=&
+	\displaystyle
+	\frac{\sigma_{0.273\text{Re}^{0.635}}}{\overline{0.273 \text{Re}^{0.635}}} \\
+	\sigma_{uv}^2 &=& \sigma_u^2 \overline v^2 + 
+	\sigma_v^2 \overline u^2 & u = 0.273\text{Re}^{0.635}\text{Pr}^{0.34} \\
+	&&& v = \text{Fn} \\
+	\implies \sigma_{
+		0.273\text{Re}^{0.635}\text{Pr}^{0.34} \text{Fn}
+	}^2 &=& \sigma_{
+		0.273\text{Re}^{0.635}\text{Pr}^{0.34}
+	}^2 \overline{\text{Fn}}^2 \\
+	\implies \sigma_{\text{Nu}} &=& 
+	\sigma_{
+		0.273\text{Re}^{0.635}\text{Pr}^{0.34}
+	} \overline{\text{Fn}}
+\end{array}
+$$
+
+#### 6.2.11. 平均表面熱傳係數（理論值） 誤差傳遞
+
+$$
+\begin{array}{rl}
+	\overline h &=&
+	0.426 \overline{
+		\text{Re}
+	}^{0.635}
+	\overline{
+		\text{Pr}
+	}^{0.34} \\
+	\sigma_{u^lv^m}^2 &=&
+	\displaystyle
+	l^2 \left(
+		\frac{\sigma_u}
+		{\overline u}
+	\right)^2 +
+	m^2 \left(
+		\frac{\sigma_v}{\overline v}
+	\right)^2 & u = 0.426 & l = 1 \\
+	&&& v = \text{Re} & m = 0.635 \\
+	\implies \sigma_{0.426\text{Re}^{0.635}} &=&
+	\displaystyle
+	0.635 \cdot \frac{
+		\sigma_{
+			\text{Re}
+		}
+	}{
+		\overline{
+			\text{Re}
+		}
+	} \\
+	\sigma_{u^lv^m}^2 &=&
+	\displaystyle
+	l^2 \left(
+		\frac{\sigma_u}
+		{\overline u}
+	\right)^2 +
+	m^2 \left(
+		\frac{\sigma_v}{\overline v}
+	\right)^2 & u = 0.426\text{Re}^{0.635} & l = 1 \\
+	&&& v = \text{Pr} & m = 0.34 \\
+	\implies \sigma_h &=&
+	\displaystyle
+	\frac{
+		\sigma_{
+			0.426\text{Re}^{0.635}
+		}
+	}{0.426\text{Re}^{0.635}}
+\end{array}
+$$
+
+## 7. 問題與討論
+
+1. 試以雷諾數(Re)為X軸、平均表面熱傳係數(h)為Y軸，分別繪製單管與多管的Re對h關係圖(含實驗值及理論值)。(須有四張圖，每張圖兩條線)
+
+![](imgs/exp-2-2_picture4.png)
+
+2. 解釋Re對h關係圖之意義與誤差過大之點。
+
+Re對h關係圖顯示了當Re較大時，對流較強（速度相對較快），因此平均表面熱傳係數也會上升。在第一個row的數據中，測得的h遠低於理論值，而換到較下方的row時，測得的h遠高於理論值。這代表溫度量測可能有不穩的情況。
+
+3. 實驗時如何確定溫度達到穩態？
+
+可以以$T_s$ 作為基準，當$T_s$ 達到穩定時代表達到穩態。
+
+4. 變更加熱管位置是否影響熱傳效果？
+
+是。就實驗結果來看，較後方的加熱管熱傳效果較好，但我們認為應該是前面的加熱管熱傳效果較好。
+
+## 8. 心得與建議
+
+就實驗結果來看，多管的散熱效果確實比單管的好。不過在多管的實驗中，改變加熱管位置到後方卻讓熱傳效果變好，這部份應該是測量溫度時不夠準確，有點太急了。希望以後有機會可以更有耐心測量。
+
+<div STYLE="page-break-after: always;"></div>
 
 # 實驗2-3: 熱傳實驗II熱對流雙管熱交換器
 
@@ -614,6 +1316,49 @@ $$
 1. 等待熱水爐加熱時，不要開啟熱水循環馬達，以免馬達長時間運轉導致過熱燒毀。
 2. 開啟熱水循環馬達前，應先確認熱水管道上所有閥門已打開，且馬達開啟後要再確認熱水有正常循環流動，以免馬達長期空轉導致過熱燒毀。
 
+<div STYLE="page-break-after: always;"></div>
+
+## 5. 實驗結果
+
+### 5.1. 數值（表格數值填寫真值即可）
+
+| $\bcancel{\begin{array}{} & \rm 溫度(\degree \text C) \\ \rm 流向 \end{array}}$ | 熱水管中段溫度T1 | 冷水管中段溫度T2 | 冷水管進口溫度T3 | 熱水管進口溫度T4 | 熱水管出口溫度T5 | 冷水管出口溫度T6 | 熱水流量 $Q_h$ (L/min) | 冷水流量 $Q_c$ L/min |
+| ------------------------------------------------------------------------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------------- | -------------------- |
+| 順向流                                                                          | 50.4             | 25.7             | 24.6             | 58.4             | 43.4             | 28.2             | 11                     | 11                   |
+| 逆向流                                                                          | 47.4             | 24.4             | 23.3             | 62.8             | 36.4             | 28.6             | 11                     | 11                   | 
+
+### 5.2. 計算結果（表格數值填寫真值即可）
+
+| $\bcancel{\begin{array}{} & 結果 \\ 流向 \end{array}}$ | 進口溫差 ($\degree \text C$) $\Delta T_1 = T_4 - T_3$ | 出口溫差（$\degree \text{C}$）$\Delta T_2 = T_5 - T_6$ | 對數平均溫度差（$\degree \text C$）$\displaystyle \Delta T_m = \frac{\Delta T_2 - \Delta T_1}{\ln(\Delta T_2 / \Delta T_1)}$ |
+| ------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| 順向流                                                 | 33.8                                                  | 15.2                                                   | 23.2743                                                                                                                      |
+| 逆向流                                                 | 39.5                                                  | 7.8                                                    | 19.5416                                                                                                                      |
+
+| $\bcancel{\begin{array}{} & 結果 \\ 流向 \end{array}}$ | 熱水熱傳量 (J/s) $q_h = \rho Q_h C_h \Delta T_h$ | 冷水熱傳量 (J/s) $q_c = \rho Q_c C_c \Delta T_c$ | 效率 $\displaystyle \eta = \frac{q_c}{q_h}$ |
+| ------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------- |
+| 順向流                                                 | 11479.16                                         | 2755.00                                          | 24.00%                                      |
+| 逆向流                                                 | 20203.32                                         | 4055.97                                          | 20.08%                                            |
+
+- $\rho$: 水的密度，$997 \text{kg/m}^3$
+
+註：水的熱值=4.1868kJ/kg-K，精確值請依實際溫度查表。
+
+## 6. 問題與討論
+
+1. 試比較順向流與逆向流的實驗結果，並分析之。
+
+順向流的效率相較逆向流的效率高，這個實驗結果與理想的狀況不同。但是在熱傳量的方面，逆向流的熱傳量顯著較高。
+
+2. 為何$q_h$不等於$q_c$？並探討本實驗誤差可能之原因？
+
+熱水傳出的熱除了會被冷水吸收外，還有可能被空氣與實驗器材吸收。本實驗沒有將管路與外界絕熱，因此此部份會產生實驗誤差。
+
+## 7. 心得與建議
+
+本次實驗的效率計算有點奇怪，雖然溫度差與熱傳量看起來都有逆向流效率較佳的跡象，但是效率卻沒有如我們所想。希望可以了解到原因。
+
+<div STYLE="page-break-after: always;"></div>
+
 # 實驗2-4: 空調系統實驗(Air-Conditioning System)
 
 ## 1. 實驗目的
@@ -624,4 +1369,418 @@ $$
 
 1. 熱泵(Heat Pump): 包括以下部件
 	1. 壓縮機(Compressor): 為0.5HP密閉式之雙缸往復式壓縮機。
-	2. 蒸發器或冷凝器(Evaporator/Condenser): 
+	2. 蒸發器或冷凝器(Evaporator/Condenser): 為鰭盤式熱交換器，依冷媒循環方向不同，可作為蒸發器或冷凝器。
+	3. 膨脹閥(Expansion Valve): 冷媒降壓膨脹用。
+	4. 水箱熱交換器(包含蒸發器或冷凝器): 將蒸發器或冷凝器的盤管沈浸在水箱中，與二次冷媒(本系統使用水)做熱交換。
+	5. 四向閥(4-way valve): 控制冷媒循環方向。
+	6. 冷媒蓄集器(Coolant Receiver): 冷媒暫存用。
+2. 冷媒(Refrigerant): 本系統使用R-12冷媒，密度=1.31 kg/L。
+3. 安全控制閥(Safety control valve): 有兩組，包含高壓安全控制閥與低壓安全控制閥。高壓安全控制閥用來防止高壓端壓力過高，若使用R12冷媒則設定為$16\text{ kg}/\text{cm}^2$(若使用R22冷媒則為$24 \text{ kg}/\text{cm}^2$)。低壓控制閥用來防止低壓端壓力過低，設定壓力值值時會設定為比運轉時蒸發溫度低$10\degree \text C$ 之飽和溫度下的壓力。
+4. 環循泵浦(circulating pump): 為0.125HP的離心式泵浦(centrifugal pump)，提供二次冷媒(本系統使用水)循環之動力。
+5. 空調箱風扇(Bellows Thermal Fans): 利用二次冷媒調節室內空氣的溫度，其機構包括風扇及冷卻盤管。
+
+以下為空調實驗的設備零件圖：
+
+![|500](exp-2-4_picture2.png)
+
+以下為空調系統分別為冷氣與暖氣時的流向：
+
+![|600](imgs/exp-2-4_picture3.png)
+
+## 3. 實驗原理
+
+### 3.1. 熱泵(Heat Pump)
+
+- 熱泵是一種可以將熱能由低溫處傳送到高溫處的設備。
+- 根據使用目的不同，熱泵可以分為冷凍機(Refrigerator)與暖氣機。
+	- 冷凍機：從低溫區吸取熱量，移至大氣或其他外界(如冷氣機、冰箱)。
+	- 暖氣機：從大氣或其他外界吸取熱量，移至較高溫度區域。
+- 根據熱力學第二定律的Clausius Statement，我們需要有外界動力(功)的加入，才能將熱能由低溫傳送到高溫。
+
+### 3.2. Vapor Compression Cycle 簡介
+
+一般冷凍系統所採用的循環為Vapor Compression Cycle，其利用壓縮機(Compressor)作功與冷媒作為媒介，將低溫區的熱能傳送到高溫區。
+
+下圖描述了Vapor Compression Cycle 的運作方塊圖與P-h圖：
+
+![|600](imgs/exp-2-4_picture4.png)
+
+### 3.3. Vapor Compression Cycle 過程
+
+1. $1 \rightarrow 2$: 冷媒經由壓縮機(Compressor)加壓為高壓氣態冷媒，此為等熵過程。
+2. $2\rightarrow 3$: 氣態冷媒經由冷凝器(Condenser)凝結放熱成為液態，此為等壓過程。
+3. $3 \rightarrow 4$: 液態冷媒經膨脹閥(Expansion Valve)降壓，此為等焓過程。在小型冷凍系統(窗形冷氣機、家用冰箱)中，常使用毛細管(Capillary tube)來代替膨脹閥。
+4. $4 \rightarrow 1$: 液態冷媒經蒸發器(Evaporator)蒸發吸熱成為氣態，此為等壓過程。
+
+### 3.4. 冷氣機與暖氣機
+
+- 將蒸發器放在室內、冷凝器放在室外，即可將室內的熱量移至室外成為冷氣機。
+- 將蒸發器放在室外、冷凝器放在室內，即可將室外的熱量移至室內成為暖氣機。
+- 如果蒸發器與冷凝器構造相同(均為熱交換氣)，則可透過方向閥改變冷媒循環方向，製作一台同時具有冷氣及暖氣功能的設備(常見的冷暖器機)。
+
+### 3.5. 冷氣機之熱力效率(Thermal Efficiency)
+
+熱力機械領域中所稱的熱力效率(Thermal Efficiency)，在冷氣機稱為性能係數COP(Coefficient of Performance)。此數值可以表示為：
+
+$$
+\text{COP} = \frac{
+	\dot Q_{in}
+}{
+	\dot W_{in}
+} = 
+\frac{
+	\dot m (h_1 - h_4)
+}{
+	\dot m (h_2 - h_1)
+} = 
+\frac{h_1 - h_4}{h_2 - h_1}
+$$
+
+- $\dot Q_{in}$: 在蒸發器內所吸收的熱量
+- $\dot W_{in}$: 壓縮機所作的功
+
+各點的焓值可由Pressure-Enthalpy圖查得，但注意P及T為絕對壓力及絕對溫度。
+
+### 3.6. 暖氣機之性能係數(Coefficient of Performance)
+
+暖氣機之性能係數為
+
+$$
+\text{COP}_\text{HP} = 
+\frac{\dot Q_H}{\dot W_{in}} = 
+\frac{\dot m (h_2 - h_3)}{\dot m(h_2 - h_1)} = 
+\frac{h_2 - h_3}{h_2 - h_1}
+$$
+
+- $\dot Q_H$: 在冷凝器內所釋放的熱量
+- $\dot W_{in}$: 壓縮機所作的功
+
+### 3.7. 空氣調節(air conditioning)
+
+- 空氣調節的意思是將空氣的熱力性質改變，以達到所需要的狀態。
+- 通常為調節空氣溫度、濕度、新鮮空氣換氣率與空氣流動的速度。
+
+### 3.8. 中央空調系統(central air conditioning system)
+
+- 由壓縮機、冷凝器、蒸發器與冷媒膨脹閥等冷凍循環裝置組成之冰水主機，藉由熱交換器將作為二次冷媒之冰水降溫後，由冰水循環系統送至送風機或空調箱將室內空氣降溫，或再藉由風管將冷風送至需要冷氣之處所，此系統稱為中央空調系統。
+
+![|500](imgs/exp-2-4_picture5.png)
+
+- 此系統常用在空調範圍大、遠距離或場地受到限制之場所(辦公大樓、食品冷凍工廠等)。
+- 若空調溫度接近水的冰點($0\degree \text C$)以下，為避免冰水系統結冰，常在冰水中加入抗凍劑(例如乙二醇或NaCl)，使水的冰點降低，甚至可達$-50\degree \text C$。
+- 因為早期都在水中加入NaCl，因此此種添加抗凍劑的冰水又稱為鹵水(brine)。
+
+## 4. 實驗計算
+
+### 4.1. 冷凍能力(regregeration capacity)
+
+$$
+\begin{array}{}
+	\text{冷氣循環：} & \dot Q_{in} &=& \dot m_R (h_1 - h_4) &=& \rho_RV_R(h_1 - h_4) \\
+	\text{暖氣循環：} & \dot Q_H &=& \dot m_R(h_2 - h_3) &=& \rho_RV_R(h_2 - h_3)
+\end{array}
+$$
+
+- $\dot m_R$: 冷媒質量流率
+- $\rho_R$: 冷媒密度，1.31 kg/L for R-12
+- $V_R$: 冷媒體積流量
+
+通常冷氣機的容量以每小時能自室內移走多少熱量來表示，在公制單位為 kCal/hr，在英制單位為 But/hr。
+
+### 4.2. 壓縮機(Compressor)
+
+在等熵壓縮過程出口溫度為：
+
+$$T_{2S} = T_1 \left(
+	\frac{P_2}{P_1}
+\right)^{
+	\frac{1 - k}{k}
+}$$
+
+- $k = \frac{C_p}{C_v} = 1.184 \text{ for R-12}$
+- 因實際壓縮過程並非等熵過程，所以出口溫度會與上式不同。
+
+實際壓縮機運轉時會有摩擦等損失，所以壓縮機效率為
+
+$$\eta_c = \frac{
+	\dot W_{in}
+}{
+	\dot W_{in\_act}
+} = \frac{
+	\dot m_R(h_2 - h_1)
+}{
+	VI
+}$$
+
+- $\dot W_{in\_act} = VI$: 壓縮機輸入之功率，可由功率表測得。
+
+### 4.3. 實際熱效率
+
+$$
+\begin{array}{}
+	\text{冷氣循環：} & \text{COP} &=& 
+	\displaystyle
+	\frac{
+		\dot Q_{in}
+	}{
+		\dot W_{in\_act}
+	} &=& 
+	\displaystyle
+	\frac{
+		\dot m_R(h_1 - h_4)
+	}{
+		VI
+	} \\
+	\text{暖氣循環：} & \text{COP}_\text{HP} &=& 
+	\displaystyle
+	\frac{
+		\dot Q_H
+	}{
+		\dot W_{in\_act}
+	} &=& \displaystyle
+	\frac{\dot m_R(h_2 - h_3)}{VI}
+\end{array}
+$$
+
+### 4.4. 能源效率比(Energy Efficiency Ratio, EER)
+
+一般為了節省能源，有能源效率比可以比較一個冷凍設備的節電能力。
+
+$$\text{EER} = \frac{冷凍能力(\text{Kcal/hr})}{消耗功率(\text{Watt})}$$
+
+### 4.5. 水箱熱交換器的熱交換功率
+
+$$
+\begin{array}{}
+	\text{冷氣循環：} & 
+	\eta_w &=&
+	\displaystyle
+	\frac{
+		\dot m_w C_{pw}(T_{wo} - T_{wi})
+	}{
+		\dot m_R(h_1 - h_4)
+	} \\
+	\text{暖氣循環：} &
+	\eta_w &=& 
+	\displaystyle \frac{
+		\dot m_w C_{pw}(T_{wi} - T_{wo})
+	}{
+		\dot m_R (h_2 - h_3)
+	}
+\end{array}
+$$
+
+- $\dot m_w$: 冰水的質量流率
+- $C_{pw}$: 水的比熱$\approx 4.18 \text{kJ/kg-}\degree\text{C}$
+- $T_{wo}$: 空調箱水管出口溫度
+- $T_{wi}$: 水泵進口溫度
+
+### 4.6. 空調箱的熱效率
+
+$$
+\begin{array}{}
+	\text{冷氣循環：} & \eta_{fan} &=& 
+	\displaystyle
+	\frac{
+		\dot m_a C_{pa}(T_a - T_{ao})
+	}{
+		\dot m_w C_{pw}(T_{wo} - T_{wi})
+	} \\
+	\text{暖氣循環：} & \eta_{fan} &=&
+	\displaystyle
+	\frac{
+		\dot m_a C_{pa}(T_{ao} - T_a)
+	}{
+		\dot m_w C_{pw}(T_{wi} - T_{wo})
+	}
+\end{array}
+$$
+
+- $\dot m_a$: 空氣的質量流率，$\dot m_a = \rho_a A v_a$
+- $\rho_a$: 空氣密度，$\rho_a \approx 1.2 \text{kg/m}^3$
+- $A$: 出封口截面積，$A = 0.31\text{m} \times 0.09 \text{m} = 27.9 \times 10^{-3} \text{m}^2$
+- $v_a$: 風速
+- $C_{pa}$: 空氣比熱，若忽略空氣中的水分，$C_{pa}\approx 57.14 \text{J/kg-}\degree \text{C}$。
+- $T_a$: 空調箱進氣口溫度，在本實驗假設與大氣溫度相同。
+- $T_{ao}$: 空調箱出風口溫度。
+
+### 4.7. 備註
+
+- 本實驗忽略所有管線的熱損失，若要減少管線熱損失，可使用保溫材料將冷媒及冷水管線包裹起來。
+
+### 5. 實驗步驟
+
+1. 將壓克力水箱注水至八分滿(建議用純水)，作為熱交換器及冰(熱)水儲槽。
+2. 開啟總電源開關。若有異音，應該立刻停機。
+3. 選擇想要之循環過程(冷氣機 SUMMER COND. 或暖氣機 WINTER COND.)，並開啟空調風扇(CONDITIONING FAN)及冷凝/蒸發器風扇(CONDENSER/EVAP. FAN)。
+4. 開啟空調系統的循環泵浦(CONDITIONING SYSTEM)，並等待壓力及溫度表上之數據達穩定狀態後，量測相關數據。
+5. 利用風速計測量出風口風速。
+6. 實驗結束後，循環選擇鈕切回STOP，關閉總電源。
+
+注意事項：
+
+- 實驗過程中，常會發生壓力過高而跳機之情形，建議在冷氣機循環時，可將冷凝器之風扇開至最大，而在暖氣機循環時，可將蒸發器之風扇轉速調小。
+- 任何量測之數據應該在穩態下量測，且溫度量測時，務必將溫度計探針緊密接觸量測處，避免產生誤差。
+- 將水箱內的水抽掉時，要小心排水管避免噴濺至地面。如果地面有積水應拖乾淨，以免人員滑倒。
+
+<div STYLE="page-break-after: always;"></div>
+
+# 實驗2-5: 散熱模組性能測試
+
+## 1. 實驗目的
+
+觀察電腦CPU的散熱鰭片在強制對流下，熱阻R與空氣流量Q的關係，並利用此方法應用在實際散熱鰭片的設計。
+
+## 2. 實驗設備
+
+![|500](imgs/exp-2-5_picture2.png)
+
+上圖為散熱模組，包含以下零件：
+
+1. 控制用電氣箱及操作面板。
+2. 標準流量產生裝置，腔室直徑(Chamber Diameter) D5=150mm
+3. 接觸壓力量測裝置。
+4. 模擬熱源裝置，模擬的CPU大小為$31 \times 31 \text{mm}$，電阻為 $R=22.4\Omega$。
+5. 直流電源供應器。
+6. 環境乾溼球溫度計。
+
+## 3. 實驗原理
+
+### 3.1. 散熱模組結構
+
+![|500](imgs/exp-2-5_picture3.png)
+
+- 模擬熱源以方形銅棒製作而成
+- 銅棒底部有加熱器
+- 銅棒內有$T_u, T_m, T_l$ 三組溫度測量點
+- 銅棒四周有隔熱材料
+
+模擬熱源的熱傳量與熱源表面溫度$T_c$ 與熱傳量$Q$的計算可以根據一維熱傳導公式(Fourier law)得出：
+
+$$Q_{out} = K_m A \frac{T_l - T_u}{\Delta X} = C_1 \times (T_l - T_u)$$
+
+- $\Delta X = T_l$ 與 $T_u$ 兩溫度量測點的距離
+- $A$: 銅棒熱傳導面積
+- $K_m$: 銅棒材料的熱傳導係數
+- $C_1$: 常數，本實驗中$\displaystyle C_1 = \frac{K_m A}{\Delta X} = 2.138$
+
+$T_c$: 熱源表面溫度，可以由以下公式求得：
+
+$$\displaystyle T_c = T_u - \frac{\Delta X_1}{\Delta X}(T_l - T_u) = T_u - \frac{T_l - T_u}{C_2}$$
+- $\Delta X_1$: $T_u$ 到 $T_c$ 的距離，本實驗中：$\displaystyle \frac{\Delta X}{\Delta X_1} = C_2 = 14$。
+
+根據以上兩個公式，本實驗的模擬熱源計算公式可以簡化為：
+
+$$\begin{array}{}
+	Q_{out} &=& C_1\times (T_l - T_u) &=& 2.138 \times (T_l - T_u) \\
+	T_c &=& \displaystyle T_u - \frac{T_l - T_u}{14}
+\end{array}$$
+
+散熱器的熱阻定義如下：
+
+$$R = \frac{T_c - T_a}{Q_{out}}$$
+
+- $T_c$: 熱源表面溫度
+- $T_a$: 散熱器入口溫度
+- $Q_{out}$: 模擬熱源的熱傳量
+
+### 3.2. 標準風量產生裝置結構及原理
+
+![|500](imgs/exp-2-5_picture4.png)
+
+- 由噴嘴上游端PL5與下游端PL6的壓力差 ($\Delta P_{56}$) 計算噴嘴流速
+- 配合 Reynold's number 找出合理 $C_d$ 值，再計算出以PL5為參考壓力的流量值 Q5
+
+$$
+\begin{array}{rl}
+	Q_5 &=& C_d UA \\
+	\displaystyle \frac 1 2 \rho_{air} U_n^2 &=& \Delta P_{56} \\
+	A &=& 噴嘴喉部面積 \\
+	C_d &=& \displaystyle 0.9986 - \frac{7.006}{\sqrt{Re}} + \frac{134.6}{Re} \\
+	Re &=& \frac{D_n U_n}{\nu}
+\end{array}
+$$
+
+### 3.3. 流量計算軟體 AMCA210
+
+本實驗提供流量計算軟體AMCA210，可以輸入量測物理量與噴嘴尺寸即可計算流量。
+
+![|500](imgs/exp-2-5_picture5.png)
+
+- 軟體中，P5腔室壓力為PL8+P56之壓力和
+- 噴嘴尺寸與相對應流量量測範圍如下表：
+
+![|500](imgs/exp-2-5_picture6.png)
+
+## 4. 實驗步驟
+
+### A. 散熱器風扇+輔助風扇
+
+1. 將散熱器裝置於模擬熱源上(須於散熱器與模擬熱源之界面上塗導熱膏)，並
+接妥待測之散熱器風扇及施壓裝置。
+2. 調整施壓裝置之接觸壓力至固定值(請勿超過 7 kg/cm2 =100 psi)。
+3. 根據欲測試散熱器風扇之流量範圍，選擇合適之噴嘴尺寸，並接妥標準風量
+產生裝置。
+4. 調整散熱器風扇(Fan)之電源供應器為 3V、5V、9V，使散熱器風扇達到適合
+的轉速。(※切記風扇電壓不得超過 12V)
+5. 調整輔助風扇之變頻器，讓參考壓力 Pref=0，如選用之噴嘴流量範圍不適當，
+則更換噴嘴尺寸。
+6. 將量測所得之物理量輸入電腦，由 AMCA210 程式計算求得風量。
+7. 調整加熱器(Heater)電源供應器的電壓(約 15V)，使達至欲測試之熱量。
+8. 待模擬熱源 TL、Tu 溫度達到穩定狀態，記錄 TL、Tu 溫度，並分別計算熱
+傳量 Q 及熱源表面溫度 Tc。
+9. 調整散熱器風扇不同的風量(調整風扇轉速或更換噴嘴尺寸)，量測散熱器在
+不同流量下之熱阻關係。
+
+### B.只開輔助風扇(不開散熱器風扇，用於測量超過散熱器風扇自身容量以外之風量)：
+
+1. 將散熱器裝置於模擬熱源上(須於散熱器與模擬熱源之界面上塗導熱膏)，並
+接妥待測之散熱器風扇及施壓裝置。
+- 106 -
+2. 調整施壓裝置之接觸壓力至固定值。
+3. 根據欲測試之流量範圍，選擇合適之噴嘴尺寸。
+4. 啟動輔助風機之變頻器，並調整至合適之風量。
+5. 調整加熱器之電源供應器，使達至欲測試之熱量。
+6. 待模擬熱源 TL、Tu 溫度達到穩定狀態，記錄 TL、Tu 溫度
+
+### C.散熱器於自由狀態熱阻量測(未啟動輔助風扇，只開散熱器風扇)：
+
+將輔助風扇來的風管拆掉，也就是不接風量產生裝置，直接量測散熱模組(散
+熱器+風扇)之熱阻值。
+
+## 5. 實驗結果
+
+### 5.1. 散熱器風扇+輔助風扇
+
+#### 5.1.1. 實驗數據
+
+|     | Td $\degree$C | Tw $\degree$C | T8=T5 $\degree$C | Pb mm_Hg | P56 mmAq | P8 mmAq | Ta $\degree$C | Pref mmAq | Tu $\degree$C | TL $\degree$C |
+| --- | ------------- | ------------- | ---------------- | -------- | -------- | ------- | ------------- | --------- | ------------- | ------------- |
+| 1   | 25.2          | 23.2          | 25.9             | 773.9    | 49.6     | 6.3     | 25.5          | 0.1       | 30.73         | 34.82         |
+| 2   | 25.0          | 23.3          | 26.7             | 773.9    | 64.9     | 7.4     | 25.8          | 0.1       | 30.67         | 34.58         |
+| 3   | 25.1          | 23.3          | 26.6             | 773.9    | 88.1     | 9.2     | 25.7          | 0.0       | 30.51         | 34.51         | 
+
+#### 5.1.2. 計算結果
+
+|     | Q_flow CFM | Tc $\degree$C | R $\degree$C/W | Qh W |
+| --- | ---------- | ------------- | -------------- | ---- |
+| 1   |            |               |                |      |
+| 2   |            |               |                |      |
+| 3   |            |               |                |      |
+
+#### 5.1.3. air flow rate v.s. thermal resistance chart
+
+### 5.2. 散熱器+假風扇（風扇不接電源）
+
+|     | Td $\degree$C | Tw $\degree$C | T8=T5 $\degree$C | Pb mm_Hg | P56 mmAq | P8 mmAq | Ta $degree$C | Pref mmAq | Tu $\degree$C | TL $\degree$C |
+| --- | ------------- | ------------- | ---------------- | -------- | -------- | ------- | ------------ | --------- | ------------- | ------------- |
+| 1   | 25.1          | 23.1          | 25.6             | 773.9    | 15.9     | 3.8     | 25.4         | 0.0       | 30.95         | 34.72         | 
+
+## 6. 問題與討論
+
+1. 依實驗結果比較不同風量對散熱器熱阻之影響？
+
+2. 請探討影響散熱器熱阻大小的因素？
+
+## 7. 心得與建議
+

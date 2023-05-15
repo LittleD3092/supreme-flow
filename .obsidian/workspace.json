@@ -17,9 +17,24 @@
                 "mode": "source",
                 "source": true
               }
-            }
+            },
+            "group": "ff76e415b2d35e5f"
+          },
+          {
+            "id": "18032cba3da95c32",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "mechanical-experiment.md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "ff76e415b2d35e5f"
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -69,7 +84,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211.50260543823242
+    "width": 211.50260543823242,
+    "collapsed": true
   },
   "right": {
     "id": "2c968734fb4189d2",
@@ -150,6 +166,9 @@
   },
   "active": "1f978021e0d0222c",
   "lastOpenFiles": [
+    "imgs/exp-2-5_picture7.png",
+    "exp2-5.py",
+    "exp2-2 copy.py",
     "imgs/exp-2-2_picture4.png",
     "mechanical-experiment.md",
     "exp2-2.py",

@@ -1,9 +1,3 @@
-# Table of Contents
-
-- #TODO
-
-<div STYLE="page-break-after: always;"></div>
-
 # 實驗2-1: 熱傳實驗I 熱傳導
 
 ## 1. 實驗目的

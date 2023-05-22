@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 
 PART_REYNOLDS_NUMBER = False
 PART_NUSSELT_NUMBER = False
-PART_DRAW = True
+PART_DRAW = False
+PART_HEAT_CONVECTION_COEFFICIENT = False
+PART_6_1_6 = True
 
 if PART_REYNOLDS_NUMBER:
     def part_reynolds_number():
@@ -144,3 +146,62 @@ if PART_DRAW:
     axs[1, 1].legend()
 
     plt.show()
+
+if PART_HEAT_CONVECTION_COEFFICIENT:
+    Re1 = [4440, 4390, 5000]
+    Delta_Re1 = [20, 20, 20]
+
+    Re2 = [4580, 4660, 4660]
+    Delta_Re2 = [20, 20, 20]
+
+    Re3 = [4130, 4560, 4320]
+    Delta_Re3 = [20, 20, 20]
+
+    h_bar1 = [0.3773487648 * re ** 0.635 for re in Re1]
+    h_bar2 = [0.3773487648 * re ** 0.635 for re in Re2]
+    h_bar3 = [0.3773487648 * re ** 0.635 for re in Re3]
+    Delta_h_bar1 = [
+        0.2396164656 * delta_re / re ** 0.365
+        for re, delta_re in zip(Re1, Delta_Re1)
+    ]
+    Delta_h_bar2 = [
+        0.2396164656 * delta_re / re ** 0.365
+        for re, delta_re in zip(Re2, Delta_Re2)
+    ]
+    Delta_h_bar3 = [
+        0.2396164656 * delta_re / re ** 0.365
+        for re, delta_re in zip(Re3, Delta_Re3)
+    ]
+
+    print("h_bar1: ", h_bar1)
+    print("h_bar2: ", h_bar2)
+    print("h_bar3: ", h_bar3)
+    print("Delta_h_bar1: ", Delta_h_bar1)
+    print("Delta_h_bar2: ", Delta_h_bar2)
+    print("Delta_h_bar3: ", Delta_h_bar3)
+
+if PART_6_1_6:
+    def get_nusselt_number(re_bar):
+        return 0.174 * re_bar ** 0.618
+    
+    def get_delta_nusselt_number(delta_re, re_bar):
+        return 0.107532 * delta_re / re_bar ** 0.382
+
+    def get_heat_transfer_coefficient(re_bar):
+        return 0.283 * re_bar ** 0.618
+    
+    def get_delta_heat_transfer_coefficient(delta_re, re_bar):
+        return 0.174894 * delta_re / re_bar ** 0.382
+    
+    re = [2369, 2029, 2266]
+    delta_re = [10, 10, 10]
+
+    nu = [get_nusselt_number(re_bar) for re_bar in re]
+    delta_nu = [get_delta_nusselt_number(delta_re_bar, re_bar) for delta_re_bar, re_bar in zip(delta_re, re)]
+    h = [get_heat_transfer_coefficient(re_bar) for re_bar in re]
+    delta_h = [get_delta_heat_transfer_coefficient(delta_re_bar, re_bar) for delta_re_bar, re_bar in zip(delta_re, re)]
+
+    print("nu: ", nu)
+    print("delta_nu: ", delta_nu)
+    print("h: ", h)
+    print("delta_h: ", delta_h)
